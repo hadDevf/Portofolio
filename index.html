@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Website Developer, Jihad Habiburrahman">
-  <meta name="keywords" content="Website Developer, Jihad Habiburrahman">
-  <meta name="google-site-verification" content="HkkP4II6GUNlsX16u94T5d0zix9UO3vy4Niq0a41kow" />
+  <meta name="description" content="Web developer pemula yang fokus membangun website modern, responsif, dan cepat. Menampilkan portofolio project pertama dan proses pengembangan web.">
+  <meta name="keywords" content="Website Developer, jasa pembuatan website, haddev">
+  <meta name="google-site-verification" content="MhALdbgBALfV0w5sxAYfCiMyCSnLW7_bqNijzAmMUKc" />
   <link rel="icon" href="HadDevProfile.png">
   <link rel="stylesheet" href="style.css">
   <script src="script(1).js"></script>
@@ -44,7 +44,7 @@
       <div class="glow"></div>
     </nav>
     <div class="heading" id="heading">
-      <img src="HadDevProfile.png" alt="profile">
+      <img src="HadDevProfile.png" alt="profile" id="gambarprofile">
       <div class="judul">
       <p id="txt">Welcome to portofolio</p>
       <h1 id="txt">Jihad Habiburrah<b class="tosca">man</b></h1>
@@ -59,7 +59,7 @@
     <div class="card about" id="about" id="about1" data-aos="fade-up">
       <h1>About<b class="tosca" id="warna"> Me</b></h1>
       <hr class="garis" id="garis"/>
-      <p>Halo, Kenalin namaku<b class="tosca" id="warna1"> Jihad Habiburrahman</b>, aku adalah seorang pelajar SMK berjurusan RPL ( Rekayasa Perangkat Lunak ). Aku cukup mahir dalam bidang pengembangan website, bisa dibilang aku ini adalah <i class="tosca" id="warna2">frontend web developer</i> ( pembuat UI ( User Interface ) web ). Dan website ini kubuat dengan ilmu dan imajinasiku sendiri.
+      <p>Halo, Kenalin namaku<b class="tosca" id="warna1"> Jihad Habiburrahman</b>, aku adalah seorang pelajar SMK berjurusan RPL ( Rekayasa Perangkat Lunak ). Aku cukup mahir dalam bidang pengembangan website, bisa dibilang aku ini adalah <i class="tosca" id="warna2">frontend web developer</i> ( pembuat UI ( User Interface ) web ).
       </p>
       <div class="penawaran">
         <p>Ingin dibuatkan website? <a onclick="scrollContact()" id="cm">Contact me</a></p>
@@ -68,36 +68,39 @@
    <div class="card skill" id="skill" id="skill1" data-aos="fade-up">
      <h1>Skil<b class="tosca" id="warna3">l</b></h1>
      <hr class="garis" id="garis2">
-     <div class="skillKu">
-       <div class="skill-name" id="skill-name">
-         <h4>HTML</h4>
+       <marquee>
+     <div class="img-skill">
+       <div class="html" id="divSkill" onclick="lihatSkill()">
+         <img src="html.png">
+         <p id="txtSkill1">HTML</p>
        </div>
-       <div class="skill-bar">
-         <div class="skill-per" style="max-width:80%;" per="80%"></div>
-     </div>
-    </div>
-     <div class="skillKu">
-       <div class="skill-name" id="skill-name1">
-         <h4>CSS</h4>
+       <div class="css" id="divSkill">
+         <img src="css.png">
+         <p id="txtSkill2">CSS</p>
        </div>
-       <div class="skill-bar">
-         <div class="skill-per" style="max-width:80%;" per="80%"></div>
-     </div>
-    </div>
-     <div class="skillKu" id="skill-name2">
-       <div class="skill-name">
-         <h4>JAVASCRIPT</h4>
+       <div class="js" id="divSkill">
+         <img src="js.png">
+         <p id="txtSkill3">JAVASCRIPT</p>
        </div>
-       <div class="skill-bar">
-         <div class="skill-per" per="43%" style="max-width:43%;"></div>
      </div>
-    </div>
+       </marquee>
    </div>
    <div class="card project" id="project" id="project1" data-aos="fade-up">
      <h1>Projec<b class="tosca" id="warna4">t</b></h1>
      <hr class="garis" id="garis3">
      <div class="img-project">
        <img src="Project 1.jpg" class="apps-project" onclick="window.location.href = 'https://kaelvxy.github.io/addon_mcpe/Beranda.html'">
+       <div class="projectdesk">
+       <h3>[ Website Addon Minecraft ]</h3>
+       <p>Sebuah website kumpulan addon minecraft</p>
+       </div>
+     </div>
+     <div class="img-project" onclick="window.location.href = 'https://multimath-onetap.vercel.app'">
+       <img src="Multimath.png" class="apps-project">
+       <div class="projectdesk">
+       <h3>[ MultiMath ]</h3>
+       <p>MultiMath adalah tool/alat matematika multifungsi untuk membantu anda menghitung sebuah rumus</p>
+       </div>
      </div>
    </div>
    <div class="card education" id="education" id="education1" data-aos="fade-up">
@@ -146,6 +149,14 @@
    <br class="jarak">
    <script>
      AOS.init();
+   </script>
+   <script>
+     let gambar = document.getElementById("gambarprofile");
+    let loading = document.getElementById("loading");
+
+    gambar.addEventListener("load", () => {
+    loading.style.display = "none";
+    });
    </script>
 </body>
 </html>

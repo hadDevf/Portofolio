@@ -2,14 +2,14 @@ function opennav() {
   document.getElementById("hamburger").style.display = "block";
   document.getElementById("hamburger").style.animation = "mantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300)
 }
 function closenav() {
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
 }
 function scrollSkill() {
@@ -23,8 +23,8 @@ function scrollSkill() {
   });
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   setTimeout(() => {
     document.getElementById("skill").style.animation = "tanda 0.4s linear";
@@ -46,8 +46,8 @@ function scrollHome() {
   });
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   document.getElementById("heading").scrollIntoView({
     behavior: "smooth"
@@ -64,8 +64,8 @@ function scrollEducation() {
   });
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   setTimeout(() => {
     document.getElementById("education").style.animation = "tanda 0.4s linear";
@@ -79,8 +79,8 @@ function scrollEducation() {
 function scrollContact() {
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   document.getElementById("contact").scrollIntoView({
     behavior: "smooth"
@@ -105,12 +105,12 @@ function scrollAbout() {
   });
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   setTimeout(() => {
     document.getElementById("about").style.animation = "tanda 0.4s linear";
@@ -132,8 +132,8 @@ function scrollProject() {
   });
   document.getElementById("hamburger").style.animation = "tutupMantul 0.3s ease-in-out";
   setTimeout(() => {
-  document.getElementById("hamburger").style.display = "none";
-  document.getElementById("hamburger").style.animation = "none";
+    document.getElementById("hamburger").style.display = "none";
+    document.getElementById("hamburger").style.animation = "none";
   }, 300);
   setTimeout(() => {
     document.getElementById("project").style.animation = "tanda 0.4s linear";
@@ -144,21 +144,6 @@ function scrollProject() {
     document.getElementById("project").style.animation = "none";
   }, 1300);
 }
-function loading() {
-const load = setTimeout(() => {
-  document.getElementById("rendering-text").style.transition = "all 1s linear";
-  document.getElementById("rendering-text").style.display = "none";
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("container").style.display = "block";
-  document.getElementById("about").style.display = "flex";
-  document.getElementById("skill").style.display = "flex";
-  document.getElementById("project").style.display = "flex";
-  document.getElementById("education").style.display = "flex";
-  document.getElementById("contact").style.display = "flex";
-}, 1000);;
-localStorage.setItem("load", load);
-}
-loading();
 
 function brightnes() {
   const warna = document.getElementById("warna");
@@ -166,9 +151,9 @@ function brightnes() {
   const skillName1 = document.getElementById("skill-name1");
   const skillName2 = document.getElementById("skill-name2");
   const garis = document.getElementById("garis");
-  
+
   document.body.style.background = "#e8e8e8";
-  
+
   document.getElementById("cm").style.color = "red";
   warna.style.color = "red";
   warna1.style.color = "red";
@@ -181,7 +166,7 @@ function brightnes() {
   warna8.style.color = "red";
   warna9.style.color = "red";
   warna10.style.color = "red";
-  
+
   document.getElementById("light").style.display = "none";
   document.getElementById("night").style.display = "flex";
   document.getElementById("heading").style.color = "black";
@@ -237,5 +222,20 @@ function tele() {
   }, 1000);
 }
 function projectaddon() {
-    window.location.href = "https://kaelvxy.github.io/addon_mcpe/Beranda.html";
+  window.location.href = "https://kaelvxy.github.io/addon_mcpe/Beranda.html";
+}
+const img = document.getElementById("gambarprofile");
+let loading = document.getElementById("loading");
+
+function selesaiLoad(){
+  setTimeout(()=>{
+    loading.style.display = "none";
+  },500);
+}
+
+img.addEventListener("load", selesaiLoad);
+
+// kalau gambar sudah ke-cache
+if (img.complete) {
+  selesaiLoad();
 }

@@ -13,7 +13,7 @@ body {
   justify-items: center;
   margin: 0;
   padding: 0;
-  display: none;
+  display: block;
 }
 .header {
   width: 100%;
@@ -31,10 +31,12 @@ body {
 .header h1 {
   margin-left: 10px;
   font-family: ARJULIAN;
+  font-size: 20px;
 }
 .header .menu {
   margin-right: 10px;
-  font-size: 50px;
+  font-size: 40px;
+  font-weight: 0;
   line-height: 0;
 }
 .barlap {
@@ -93,7 +95,7 @@ body {
   animation: munculTengah 1s ease-in-out;
 }
 .heading img {
-  width: 25%;
+  width: 23%;
   border-radius: 50%;
   margin: 20px;
   margin-top: 40px;
@@ -108,7 +110,7 @@ body {
 .judul h1 {
   color: white;
   font-family: ARJULIAN;
-  font-size: 30px;
+  font-size: 27px;
   animation: jedagJedug 2.2s ease-in-out infinite;
   z-index: 0;
 }
@@ -123,7 +125,7 @@ body {
 }
 .judul p {
   font-weight: 650;
-  font-size: 15px;
+  font-size: 13px;
   font-family: DaxBold;
   animation: jedagJedug 2s ease-in-out infinite;
   z-index: 0;
@@ -178,58 +180,60 @@ pink {
 }
 @font-face {
   font-family:'AquireBold';
-  src: url('fonts/AquireBold-8Ma60.otf');
+  src: url('AquireBold-8Ma60.otf');
 }
 aquirebold {
   font-family: AquireBold;
 }
 @font-face {
   font-family:'Barclays';
-  src: url('fonts/Barclays Premier League.ttf');
+  src: url('Barclays Premier League.ttf');
 }
 barclays {
   font-family: Barclays;
 }
 @font-face {
   font-family:'BorgSquad';
-  src: url('fonts/borgsquad.ttf');
+  src: url('borgsquad.ttf');
 }
 borgsquad {
   font-family: BorgSquad;
 }
 @font-face {
   font-family:'Grand';
-  src: url('fonts/Grand.ttf');
+  src: url('Grand.ttf');
 }
 grand {
   font-family: Grand;
 }
 @font-face {
   font-family:'ArchiveRegular';
-  src: url('fonts/Archive-Regular.otf');
+  src: url('Archive-Regular.otf');
 }
 archiveregular {
   font-family: ArchiveRegular;
 }
 @font-face {
   font-family:'DaxBold';
-  src: url('fonts/Dax-Bold.otf');
+  src: url('Dax-Bold.otf');
 }
 daxbold {
   font-family: DaxBold;
 }
 @font-face {
   font-family:'Arjulian';
-  src: url('fonts/ARJULIAN.ttf');
+  src: url('ARJULIAN.ttf');
 }
 arjulian {
   font-family: Arjulian;
 }
 .card {
   width: 90%;
-  border-radius: 5px;
-  display: none;
+  border-radius: 15px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background: #2a2a2a;
   margin-top: 15px;
@@ -240,7 +244,7 @@ arjulian {
 .card h1 {
   margin-top: 5px;
   margin-left: 7px;
-  font-size: 25px;
+  font-size: 23px;
   font-family: Barclays;
 }
 .card p {
@@ -252,17 +256,66 @@ arjulian {
 }
 .card .garis {
   height: 1px;
-  width: 15%;
-  display: flex;
+  width: 100%;
+  display: none;
+  flex-direction: column;
   background: #fff;
   border: none;
   border-radius: 2px;
-  justify-self: start;
-  margin-top: -10px;
-  margin-left: 7px;
+  margin-top: 3px;
+}
+.img-skill {
+  display: flex;
+  width: 600px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 18px;
+}
+.html,.css,.js {
+  gap: 5px;
+  width: 150px;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 10px;
+  box-shadow: 2px 2px 4px white;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .3s ease;
+}
+.html p,.css p,.js p {
+  display: flex;
+  font-size: 100%;
+  font-weight: 1000;
+  font-family: Segoe UI;
+  transition: all .3s ease;
+}
+.html {
+  box-shadow: 2px 2px 4px #f56a00;
+}
+.css {
+  box-shadow: 2px 2px 4px #00acf5;
+}
+.js {
+  box-shadow: 2px 2px 4px yellow;
+}
+.html img, .css img, .js img {
+  width: 25%;
+  border-radius: 10px;
+}
+#txtSkill1, #txtSkill2, #txtSkill3 {
+  font-weight: bold;
+  font-family: Segoe UI;
+  font-size: 12px;
+  margin: 10px;
 }
 .skillKu {
   width: 100%;
+  display: none;
 }
 .skill-name {
   color: white;
@@ -405,7 +458,7 @@ blue {
   line-height: 0.4;
   font-family: ArchiveRegular;
   margin-bottom: 1px;
-  font-size: 17px;
+  font-size: 15px;
 }
 .txt-desk {
   text-align: left;
@@ -415,23 +468,46 @@ blue {
   font-weight: 650;
   line-height: 1.1;
   letter-spacing: 0.3px;
-  font-size: 15px;
+  font-size: 12px;
 }
 .txt-penting {
   color: #00faff;
   font-weight: 1000;
 }
 .img-project {
+  width: 85%;
   display: flex;
-  overflow-x: auto;
-  padding-left: 10px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  gap: 0.5rem;
-  justify-content: start;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 2.5px 2.5px 5px #00f5bf;
+  justify-content: center;
+  border-radius: 7px;
+  align-items: center;
+  margin: 10px;
+}
+.projectdesk {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  text-align: justify;
+}
+.projectdesk p {
+  font-family: Segoe UI;
+  font-weight: bold;
+  display: flex;
+  font-size: 13px;
+  margin-top: -10px;
+}
+.projectdesk h3 {
+  font-family: Segoe UI;
+  font-weight: bold;
+  display: flex;
 }
 .apps-project {
-  width: 20%;
+  width: 18%;
   border-radius: 5px;
   transition: all 0.2s linear;
 }
@@ -451,8 +527,8 @@ blue {
 .app {
   display: flex;
   flex-direction: column;
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   max-height: 100px;
   max-width: 100px;
   justify-content: center;
@@ -464,6 +540,7 @@ blue {
   padding: 7px;
   padding-bottom: 1px;
   transition: all .15s linear;
+  overflow: scroll;
 }
 .app img {
   width: 35%;
@@ -482,7 +559,7 @@ blue {
 }
 .ig:hover {
   transform: scale(1.05);
-  box-shadow: -2px -2px 14px #f58529, 2px 2px 14px purple ;
+  box-shadow: -2px -2px 14px #f58529, 2px 2px 14px purple;
   transition: all .15s linear;
   border: none;
 }
@@ -523,9 +600,9 @@ biru {
   width: 100%;
   height: 100%;
   background: white;
-  position: fixed;
+  position: absolute;
   top: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   z-index: 7;
   justify-content: center;
@@ -551,6 +628,7 @@ biru {
 }
 #about p {
   text-align: justify;
+  font-size: 14.5px;
 }
 .penawaran {
   display: flex;
@@ -621,83 +699,4 @@ biru {
   align-items: center;
   margin-right: 10px;
   transition: all .3s linear;
-}
-@media (min-width: 1024px) {
-  body {
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background: #1b1b1b;
-  }
-  .container {
-    width: 90%;
-    position: static;
-    margin-top: 50px;
-    margin-left: 350px;
-    display: flex;
-    height: 70vh;
-    justify-content: start;
-    align-items: center;
-  }
-  .card {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    background: #2a2a2a;
-    margin-bottom: 15px;
-    margin-left: 200px;
-    transition: all 0.3s linear;
-    padding: 10px;
-    animation: munculBawah 1s linear;
-  }
-  .heading {
-    width: 30%;
-    height: 70vh;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    position: fixed;
-    left: 250px;
-    top: 150px;
-    color: #fff;
-    border-radius: 10px;
-    background: #2a2a2a;
-    margin-top: 15px;
-    transition: all 0.3s linear;
-    padding: 10px;
-    animation: munculBawah 1s linear;
-  }
-  .hamburger {
-    display: none;
-  }
-  .hamburger .list {
-    display: none;
-  }
-  .header {
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
-  .header .menu {
-    display: none;
-  }
-  .header a {
-    display: inline;
-    font-weight: bold;
-  }
-  .barlap {
-    display: flex;
-    gap: 2em;
-    margin-right: 30px;
-    color: white;
-  }
-  .jarak {
-    height: 50vh;
-  }
 }
