@@ -1053,7 +1053,7 @@ biru {
 #aboutme {
   display: none;
   flex-direction: column;
-  padding-top: 190%;
+  padding-top: 105vh;
   padding-bottom: 20px;
 }
 .bagian {
@@ -1314,7 +1314,7 @@ biru {
 }
 @media (min-width: 1024px) {
   #aboutme {
-    padding-top: 50vh;
+    padding-top: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
