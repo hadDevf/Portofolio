@@ -149,3 +149,12 @@ function Projects() {
   home.style.display = "none";
   about.style.display = "none";
 }
+window.addEventListener('load', () => {
+  let loading = document.getElementById('loading');
+  let loadingTxt = document.getElementById('text-loading');
+  loading.style.animation = "hilangTengah 0.5s linear";
+  loadingTxt.style.animation = "hilangTengah 0.5s linear";
+  setTimeout(() => {
+    loading.style.display = "none";
+  }, 500);
+});
