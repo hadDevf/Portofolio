@@ -20,7 +20,6 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 .header {
   width: 90%;
@@ -1050,12 +1049,15 @@ biru {
 }
 #home {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 #aboutme {
   display: none;
   flex-direction: column;
   padding-bottom: 20px;
-  padding-top: 60vh;
+  padding-top: 15vh;
 }
 .bagian {
   margin-bottom: 0;
