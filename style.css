@@ -1044,10 +1044,8 @@ biru {
   font-family: Segoe UI;
   font-size: 13px;
   color: white;
-  display: flex;
   text-align: center;
-  position: relative;
-  bottom: 5px;
+  margin-bottom: 5px;
   margin-top: 50px;
 }
 #home {
@@ -1057,7 +1055,7 @@ biru {
   display: none;
   flex-direction: column;
   padding-bottom: 20px;
-  padding-top: 15vh;
+  padding-top: 60vh;
 }
 .bagian {
   margin-bottom: 0;
