@@ -45,7 +45,7 @@ function scrollSkill() {
 }
 function wa() {
   setTimeout(() => {
-    window.location.href = "https://api.whatsapp.com/send?phone=+6283866317462";
+    window.location.href = "https://api.whatsapp.com/send?phone=+62882016575151";
   }, 0);
 }
 function tt() {
