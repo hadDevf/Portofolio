@@ -68,12 +68,16 @@ function projectaddon() {
 }
 function animationApp() {
   const apps = ["whatsapp",
+    "whatsapps",
     "tiktok",
-    "instagram"];
+    "tiktoks",
+    "instagrams",
+    "instagram",
+    "github"];
   apps.forEach((id, index) => {
     setTimeout(() => {
       document.getElementById(id).style.animation = "mantulMantul 0.3s ease-in-out";
-    }, index * 100);
+    }, index * 50);
   });
   setTimeout(() => {
     apps.forEach(id => {
